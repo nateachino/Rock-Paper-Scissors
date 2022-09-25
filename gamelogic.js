@@ -9,26 +9,10 @@ function getComputerChoice() {
   }
 }
 
-function playerChoice() {
-  let playerChoice = prompt("Rock, Paper, or Scissors: ");
-  if (
-    playerChoice != "Rock" ||
-    playerChoice != "Paper" ||
-    playerChoice != "Scissors"
-  ) {
-  }
-}
-
 function playRound() {
   let compChoice = getComputerChoice();
   let playerChoice = prompt("Rock, Paper, or Scissors: ");
-  if (
-    playerChoice != "Rock" ||
-    playerChoice != "Paper" ||
-    playerChoice != "Scissors"
-  ) {
-    let playerChoice = prompt("Rock, Paper, or Scissors: ");
-  }
+
   playerChoice = playerChoice.toLowerCase();
   if (
     playerChoice == "rock" ||
@@ -65,12 +49,15 @@ function game() {
     } else if (winner == 3) {
       compScore += 1;
     }
+  }
 
-    if (compScore > playerScore) {
-      console.log("Computer Wins");
-    } else {
-      console.log("Player Wins");
-    }
+  console.log(playerScore);
+  if (compScore > playerScore) {
+    console.log("Computer Wins");
+  } else if (playerScore > compScore) {
+    console.log("Player Wins");
+  } else if (playerScore == compScore) {
+    console.log("Tie");
   }
 }
 
