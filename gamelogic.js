@@ -12,14 +12,14 @@ function getComputerChoice() {
 function playRound() {
   let compChoice = getComputerChoice();
   let playerChoice = prompt("Rock, Paper, or Scissors: ");
-
   playerChoice = playerChoice.toLowerCase();
+
   if (
     playerChoice == "rock" ||
     playerChoice == "paper" ||
     playerChoice == "scissors"
   ) {
-    if (playerChoice == compChoice) {
+    if (playerChoice === compChoice) {
       return 1;
     } else if (
       (playerChoice == "rock" && compChoice == "scissors") ||
@@ -34,6 +34,9 @@ function playRound() {
     ) {
       return 3;
     }
+  } else {
+    alert("Invalid input");
+    playRound();
   }
 }
 
@@ -43,7 +46,8 @@ function game() {
   for (let i = 0; i < 5; i++) {
     let winner = playRound();
     if (winner == 1) {
-      return;
+      playerScore += 0;
+      compScore += 0;
     } else if (winner == 2) {
       playerScore += 1;
     } else if (winner == 3) {
