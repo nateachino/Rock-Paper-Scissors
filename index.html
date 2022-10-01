@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="gamelogic.js" defer></script>
+    <link rel="stylesheet" href="style.css" ></link>
   </head>
   <body>
-    <script src="gamelogic.js"></script>
+    <div id="container">
+      <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+      <div class="select">
+        <p id="selected"></p>
+      </div>
+      <div class="score">
+        <h1 id="comp">Computer Score: 0</h1>
+        <h1 id="player">Player Score: 0</h1>
+      </div>
+    </div>
   </body>
 </html>
